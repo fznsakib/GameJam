@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Easycontroller.cs" />
+    <Compile Include="Assets\healthManager.cs" />
     <Compile Include="Assets\Reichsrevolver_M1879\Scripts\RevolverController.cs" />
     <Compile Include="Assets\Scripts\lightToggle.cs" />
     <Compile Include="Assets\Scripts\PlayerShooting.cs" />

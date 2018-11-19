@@ -7,7 +7,6 @@ namespace Valve.VR.InteractionSystem.Sample
         public int damagePerShot = 20;
         public float timeBetweenBullets = 0.15f;
         public float range = 100f;
-        public SteamVR_Action_Boolean NewAction;
 
         private Hand hand;
 
@@ -31,14 +30,6 @@ namespace Valve.VR.InteractionSystem.Sample
             gunLine = GetComponent<LineRenderer>();
             gunAudio = GetComponent<AudioSource>();
             gunLight = GetComponent<Light>();
-        }
-
-        private void OnActionChange(SteamVR_Action_In actionIn)
-        {
-            if (NewAction.GetStateDown(hand.handType))
-            {
-                Shoot();
-            }
         }
 
         void Update()
@@ -76,11 +67,12 @@ namespace Valve.VR.InteractionSystem.Sample
             gunParticles.Play();
 
             gunLine.enabled = true;
-            gunLine.SetPosition(0, transform.position);
+            gunLine.SetPosition(0, transform.position); 
 
             shootRay.origin = transform.position;
             shootRay.direction = transform.forward;
 
+            Debug.Log("shoot() called");
 
             if (Physics.Raycast(shootRay, out shootHit, range, shootableMask))
             {
@@ -90,10 +82,13 @@ namespace Valve.VR.InteractionSystem.Sample
                 {
                     enemyHealth.TakeDamage (damagePerShot, shootHit.point);
                 }*/
+                shootHit.collider.GetComponent<healthManager>().disable();
+                Debug.Log("if is true");
                 gunLine.SetPosition(1, shootHit.point);
             }
             else
             {
+                Debug.Log("if is false");
                 gunLine.SetPosition(1, shootRay.origin + shootRay.direction * range);
             }
         }

@@ -356,6 +356,105 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 129314, guid: 6241ef40758dd404b91e848e07dda193,
     type: 2}
   m_PrefabInternal: {fileID: 1282549661}
+--- !u!1 &368878212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 368878217}
+  - component: {fileID: 368878216}
+  - component: {fileID: 368878215}
+  - component: {fileID: 368878214}
+  - component: {fileID: 368878213}
+  m_Layer: 8
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &368878213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 368878212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa377cf04e25a94490d80238be3ed1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  healthUI: {fileID: 0}
+--- !u!65 &368878214
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 368878212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &368878215
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 368878212}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &368878216
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 368878212}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &368878217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 368878212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.25255585, y: 0.98701286, z: 1.034}
+  m_LocalScale: {x: 0.26864, y: 0.26864, z: 0.26864}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &411108478
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,14 +560,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 529158375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4390f3b73c731c846a0cc863c72d7a1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b93cbbebd6f692438cda89da4b95fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAction: {fileID: 0}
-  lightAction: {fileID: 0}
+  lightAction: {fileID: 11400000, guid: d9d14b91b68f4f54593e92c0a4700f17, type: 2}
   vibrator: {fileID: 11400000, guid: c3d4fcdf5f13333489346f812ccf9867, type: 2}
   hand: {fileID: 0}
-  GunTip: {fileID: 0}
   light: {fileID: 291765518}
 --- !u!1 &699503000
 GameObject:
@@ -960,7 +1057,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1700326810}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4390f3b73c731c846a0cc863c72d7a1e, type: 3}
   m_Name: 
@@ -971,6 +1068,21 @@ MonoBehaviour:
   hand: {fileID: 0}
   GunTip: {fileID: 1707197844}
   light: {fileID: 0}
+--- !u!114 &1700326814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1700326810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de0a3111e0c8374dbcf24cd92e650ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootAction: {fileID: 11400000, guid: bf5754f34baeba440846fdfb20ece593, type: 2}
+  vibrator: {fileID: 11400000, guid: c3d4fcdf5f13333489346f812ccf9867, type: 2}
+  hand: {fileID: 0}
+  GunTip: {fileID: 1707197844}
 --- !u!1 &1707197844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,7 +1131,6 @@ MonoBehaviour:
   damagePerShot: 20
   timeBetweenBullets: 0.15
   range: 100
-  NewAction: {fileID: 11400000, guid: bf5754f34baeba440846fdfb20ece593, type: 2}
 --- !u!82 &1707197847
 AudioSource:
   m_ObjectHideFlags: 0

@@ -37,6 +37,7 @@ namespace Valve.VR.InteractionSystem.Sample
         {
             if (shootAction.GetStateDown(hand.handType))
             {
+                Debug.Log("calling shoot()...");
                 GunTip.GetComponent<PlayerShooting>().Shoot();
                 vibrator.Execute(0.0f, 0.1f, 100f, 0.99f, SteamVR_Input_Sources.RightHand);
             }
