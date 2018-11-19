@@ -11,6 +11,8 @@ namespace Valve.VR.InteractionSystem.Sample
     {
         public SteamVR_Action_Boolean plantAction;
 
+        public SteamVR_Action_Vibration vibrator;
+
         public Hand hand;
 
         public GameObject prefabToPlant;
@@ -52,6 +54,7 @@ namespace Valve.VR.InteractionSystem.Sample
             if (plantAction.GetStateDown(hand.handType))
             {
                 GunTip.GetComponent<PlayerShooting>().Shoot();
+                vibrator.Execute(0.0f, 0.1f, 100f, 0.99f, SteamVR_Input_Sources.RightHand);
             }
         }
 
