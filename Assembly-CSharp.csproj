@@ -63,7 +63,9 @@
   <ItemGroup>
     <Compile Include="Assets\Easycontroller.cs" />
     <Compile Include="Assets\Reichsrevolver_M1879\Scripts\RevolverController.cs" />
+    <Compile Include="Assets\Scripts\lightToggle.cs" />
     <Compile Include="Assets\Scripts\PlayerShooting.cs" />
+    <Compile Include="Assets\Scripts\shootingScript.cs" />
     <Compile Include="Assets\shootingScript.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_TestThrow.cs" />

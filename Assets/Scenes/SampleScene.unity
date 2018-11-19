@@ -351,6 +351,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90}
+--- !u!1 &291765518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129314, guid: 6241ef40758dd404b91e848e07dda193,
+    type: 2}
+  m_PrefabInternal: {fileID: 1282549661}
 --- !u!1 &411108478
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,11 +443,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &529158375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 144230, guid: dc06161b6d97feb419f45f03b62e14b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 992281128}
 --- !u!4 &529158376 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 476540, guid: dc06161b6d97feb419f45f03b62e14b9,
     type: 2}
   m_PrefabInternal: {fileID: 992281128}
+--- !u!114 &529158377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 529158375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4390f3b73c731c846a0cc863c72d7a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootAction: {fileID: 0}
+  lightAction: {fileID: 0}
+  vibrator: {fileID: 11400000, guid: c3d4fcdf5f13333489346f812ccf9867, type: 2}
+  hand: {fileID: 0}
+  GunTip: {fileID: 0}
+  light: {fileID: 291765518}
 --- !u!1 &699503000
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,15 +796,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 470116, guid: 6241ef40758dd404b91e848e07dda193, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -0.001813
       objectReference: {fileID: 0}
     - target: {fileID: 470116, guid: 6241ef40758dd404b91e848e07dda193, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0077229
       objectReference: {fileID: 0}
     - target: {fileID: 470116, guid: 6241ef40758dd404b91e848e07dda193, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.056
+      value: -0.12598
       objectReference: {fileID: 0}
     - target: {fileID: 470116, guid: 6241ef40758dd404b91e848e07dda193, type: 2}
       propertyPath: m_LocalRotation.x
@@ -798,6 +825,34 @@ Prefab:
     - target: {fileID: 470116, guid: 6241ef40758dd404b91e848e07dda193, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 470116, guid: 6241ef40758dd404b91e848e07dda193, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.7681204
+      objectReference: {fileID: 0}
+    - target: {fileID: 470116, guid: 6241ef40758dd404b91e848e07dda193, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7681204
+      objectReference: {fileID: 0}
+    - target: {fileID: 470116, guid: 6241ef40758dd404b91e848e07dda193, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.7681204
+      objectReference: {fileID: 0}
+    - target: {fileID: 129314, guid: 6241ef40758dd404b91e848e07dda193, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 187386, guid: 6241ef40758dd404b91e848e07dda193, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 197558, guid: 6241ef40758dd404b91e848e07dda193, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 101968, guid: 6241ef40758dd404b91e848e07dda193, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6241ef40758dd404b91e848e07dda193, type: 2}
@@ -910,12 +965,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4390f3b73c731c846a0cc863c72d7a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantAction: {fileID: 11400000, guid: bf5754f34baeba440846fdfb20ece593, type: 2}
+  shootAction: {fileID: 11400000, guid: bf5754f34baeba440846fdfb20ece593, type: 2}
+  lightAction: {fileID: 0}
   vibrator: {fileID: 11400000, guid: c3d4fcdf5f13333489346f812ccf9867, type: 2}
   hand: {fileID: 0}
-  prefabToPlant: {fileID: 1000011210241306, guid: 8a2487c189a464148aadc3af2effa7c8,
-    type: 2}
   GunTip: {fileID: 1707197844}
+  light: {fileID: 0}
 --- !u!1 &1707197844
 GameObject:
   m_ObjectHideFlags: 0
