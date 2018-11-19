@@ -53,6 +53,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Crystal_Mine\Spline_Tool\Scripts\Math_Functions.cs" />
+     <Compile Include="Assets\Crystal_Mine\Spline_Tool\Scripts\Mesh_Maker.cs" />
+     <Compile Include="Assets\Crystal_Mine\Spline_Tool\Scripts\Path_Comp.cs" />
+     <Compile Include="Assets\Crystal_Mine\Spline_Tool\Scripts\Trail_Mesh.cs" />
      <Compile Include="Assets\Easycontroller.cs" />
      <Compile Include="Assets\Reichsrevolver_M1879\Scripts\RevolverController.cs" />
      <Compile Include="Assets\Scripts\PlayerShooting.cs" />
@@ -226,6 +230,7 @@
      <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
      <None Include="Assets\SteamVR\InteractionSystem\Samples\BuggyBuddy\Materials\LightCone.shader" />
      <None Include="Assets\SteamVR\InteractionSystem\Teleport\Shaders\Highlight.shader" />
+     <None Include="Assets\Crystal_Mine\Spline_Tool\Scripts\LICENSE.txt" />
      <None Include="Assets\SteamVR\InteractionSystem\Teleport\Shaders\HighlighGlobal.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_SphericalProjection.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_AlphaOut.shader" />
