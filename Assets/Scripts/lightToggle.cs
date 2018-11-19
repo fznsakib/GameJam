@@ -12,6 +12,13 @@ namespace Valve.VR.InteractionSystem.Sample
 
         public GameObject light;
 
+        AudioSource lightAudio;
+
+        void Awake()
+        {
+            lightAudio = GetComponent<AudioSource>();
+        }
+
         private void OnEnable()
         {
             if (hand == null)
@@ -37,6 +44,7 @@ namespace Valve.VR.InteractionSystem.Sample
         {
             if (lightAction.GetStateDown(hand.handType))
             {
+                lightAudio.Play();
                 light.SetActive(!light.activeSelf);
                 vibrator.Execute(0.0f, 0.03f, 200f, 0.1f, SteamVR_Input_Sources.LeftHand);
             }
