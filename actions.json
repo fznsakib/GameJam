@@ -37,7 +37,7 @@
     },
     {
       "name": "/actions/default/in/NewAction",
-      "type": "vector1"
+      "type": "boolean"
     },
     {
       "name": "/actions/default/out/Haptic",

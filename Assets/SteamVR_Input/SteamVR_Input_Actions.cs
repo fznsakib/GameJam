@@ -33,7 +33,7 @@ namespace Valve.VR
         
         public static SteamVR_Action_Single __actions_default_in_Squeeze;
         
-        public static SteamVR_Action_Single __actions_default_in_NewAction;
+        public static SteamVR_Action_Boolean __actions_default_in_NewAction;
         
         public static SteamVR_Action_Vibration __actions_default_out_Haptic;
         
@@ -79,7 +79,7 @@ namespace Valve.VR
             Valve.VR.SteamVR_Input.__actions_default_in_SkeletonLeftHand = ((SteamVR_Action_Skeleton)(SteamVR_Input_References.GetAction("__actions_default_in_SkeletonLeftHand")));
             Valve.VR.SteamVR_Input.__actions_default_in_SkeletonRightHand = ((SteamVR_Action_Skeleton)(SteamVR_Input_References.GetAction("__actions_default_in_SkeletonRightHand")));
             Valve.VR.SteamVR_Input.__actions_default_in_Squeeze = ((SteamVR_Action_Single)(SteamVR_Input_References.GetAction("__actions_default_in_Squeeze")));
-            Valve.VR.SteamVR_Input.__actions_default_in_NewAction = ((SteamVR_Action_Single)(SteamVR_Input_References.GetAction("__actions_default_in_NewAction")));
+            Valve.VR.SteamVR_Input.__actions_default_in_NewAction = ((SteamVR_Action_Boolean)(SteamVR_Input_References.GetAction("__actions_default_in_NewAction")));
             Valve.VR.SteamVR_Input.__actions_default_out_Haptic = ((SteamVR_Action_Vibration)(SteamVR_Input_References.GetAction("__actions_default_out_Haptic")));
             Valve.VR.SteamVR_Input.__actions_platformer_in_Move = ((SteamVR_Action_Vector2)(SteamVR_Input_References.GetAction("__actions_platformer_in_Move")));
             Valve.VR.SteamVR_Input.__actions_platformer_in_Jump = ((SteamVR_Action_Boolean)(SteamVR_Input_References.GetAction("__actions_platformer_in_Jump")));
@@ -137,13 +137,13 @@ namespace Valve.VR
                     Valve.VR.SteamVR_Input.__actions_default_in_Teleport,
                     Valve.VR.SteamVR_Input.__actions_default_in_GrabPinch,
                     Valve.VR.SteamVR_Input.__actions_default_in_GrabGrip,
+                    Valve.VR.SteamVR_Input.__actions_default_in_NewAction,
                     Valve.VR.SteamVR_Input.__actions_platformer_in_Jump,
                     Valve.VR.SteamVR_Input.__actions_buggy_in_Brake,
                     Valve.VR.SteamVR_Input.__actions_buggy_in_Reset};
             Valve.VR.SteamVR_Input.actionsSingle = new Valve.VR.SteamVR_Action_Single[]
             {
                     Valve.VR.SteamVR_Input.__actions_default_in_Squeeze,
-                    Valve.VR.SteamVR_Input.__actions_default_in_NewAction,
                     Valve.VR.SteamVR_Input.__actions_buggy_in_Throttle};
             Valve.VR.SteamVR_Input.actionsVector2 = new Valve.VR.SteamVR_Action_Vector2[]
             {

@@ -1,91 +1,101 @@
 ﻿using UnityEngine;
-using Valve.VR.InteractionSystem;
 
-public class PlayerShooting : MonoBehaviour
+namespace Valve.VR.InteractionSystem.Sample
 {
-    public int damagePerShot = 20;
-    public float timeBetweenBullets = 0.15f;
-    public float range = 100f;
-
-    private Hand hand;
-
-
-    float timer;
-    Ray shootRay = new Ray();
-    RaycastHit shootHit;
-    int shootableMask;
-    ParticleSystem gunParticles;
-    LineRenderer gunLine;
-    AudioSource gunAudio;
-    Light gunLight;
-    float effectsDisplayTime = 0.2f;
-
-
-    void Awake ()
+    public class PlayerShooting : MonoBehaviour
     {
-        hand = GetComponent<Hand>();
-        shootableMask = LayerMask.GetMask ("Shootable");
-        gunParticles = GetComponent<ParticleSystem> ();
-        gunLine = GetComponent <LineRenderer> ();
-        gunAudio = GetComponent<AudioSource> ();
-        gunLight = GetComponent<Light> ();
-    }
+        public int damagePerShot = 20;
+        public float timeBetweenBullets = 0.15f;
+        public float range = 100f;
+        public SteamVR_Action_Boolean NewAction;
+
+        private Hand hand;
 
 
-    void Update ()
-    {
-        timer += Time.deltaTime;
+        float timer;
+        Ray shootRay = new Ray();
+        RaycastHit shootHit;
+        int shootableMask;
+        ParticleSystem gunParticles;
+        LineRenderer gunLine;
+        AudioSource gunAudio;
+        Light gunLight;
+        float effectsDisplayTime = 0.2f;
 
-		if(hand.controller.GetHairTriggerDown() && timer >= timeBetweenBullets && Time.timeScale != 0)
+
+        void Awake()
         {
-            Shoot ();
+            hand = GetComponent<Hand>();
+            shootableMask = LayerMask.GetMask("Shootable");
+            gunParticles = GetComponent<ParticleSystem>();
+            gunLine = GetComponent<LineRenderer>();
+            gunAudio = GetComponent<AudioSource>();
+            gunLight = GetComponent<Light>();
         }
 
-        if(timer >= timeBetweenBullets * effectsDisplayTime)
+        private void OnActionChange(SteamVR_Action_In actionIn)
         {
-            DisableEffects ();
-        }
-    }
-
-
-    public void DisableEffects ()
-    {
-        gunLine.enabled = false;
-        gunLight.enabled = false;
-    }
-
-
-    void Shoot ()
-    {
-        timer = 0f;
-
-        gunAudio.Play ();
-
-        gunLight.enabled = true;
-
-        gunParticles.Stop ();
-        gunParticles.Play ();
-
-        gunLine.enabled = true;
-        gunLine.SetPosition (0, transform.position);
-
-        shootRay.origin = transform.position;
-        shootRay.direction = transform.forward;
-
-        
-        if(Physics.Raycast (shootRay, out shootHit, range, shootableMask))
-        {
-            /*
-            EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth> ();
-            if(enemyHealth != null)
+            if (NewAction.GetStateDown(hand.handType))
             {
-                enemyHealth.TakeDamage (damagePerShot, shootHit.point);
-            }*/
-            gunLine.SetPosition (1, shootHit.point);
+                Shoot();
+            }
         }
-        else
+
+        void Update()
         {
-            gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
+            timer += Time.deltaTime;
+
+            if (Input.GetButton("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
+            {
+                Shoot();
+            }
+
+            if (timer >= timeBetweenBullets * effectsDisplayTime)
+            {
+                DisableEffects();
+            }
+        }
+
+
+        public void DisableEffects()
+        {
+            gunLine.enabled = false;
+            gunLight.enabled = false;
+        }
+
+
+        public void Shoot()
+        {
+            timer = 0f;
+
+            gunAudio.Play();
+
+            gunLight.enabled = true;
+
+            gunParticles.Stop();
+            gunParticles.Play();
+
+            gunLine.enabled = true;
+            gunLine.SetPosition(0, transform.position);
+
+            shootRay.origin = transform.position;
+            shootRay.direction = transform.forward;
+
+
+            if (Physics.Raycast(shootRay, out shootHit, range, shootableMask))
+            {
+                /*
+                EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth> ();
+                if(enemyHealth != null)
+                {
+                    enemyHealth.TakeDamage (damagePerShot, shootHit.point);
+                }*/
+                gunLine.SetPosition(1, shootHit.point);
+            }
+            else
+            {
+                gunLine.SetPosition(1, shootRay.origin + shootRay.direction * range);
+            }
         }
     }
 }

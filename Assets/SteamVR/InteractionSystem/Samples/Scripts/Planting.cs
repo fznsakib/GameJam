@@ -15,6 +15,16 @@ namespace Valve.VR.InteractionSystem.Sample
 
         public GameObject prefabToPlant;
 
+        //Without reference variable
+        public GameObject GunTip;
+
+        //WWGPistol_0.GetComponent<GunTip>();
+ 
+        //With reference variable
+        //GameObject objectWithScript;
+
+        //objectWithScript.refScript; 
+        
 
         private void OnEnable()
         {
@@ -36,11 +46,12 @@ namespace Valve.VR.InteractionSystem.Sample
                 plantAction.RemoveOnChangeListener(OnPlantActionChange, hand.handType);
         }
 
+
         private void OnPlantActionChange(SteamVR_Action_In actionIn)
         {
             if (plantAction.GetStateDown(hand.handType))
             {
-                Plant();
+                GunTip.GetComponent<PlayerShooting>().Shoot();
             }
         }
 
