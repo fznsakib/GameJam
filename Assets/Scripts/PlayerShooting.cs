@@ -90,10 +90,13 @@ namespace Valve.VR.InteractionSystem.Sample
                 {
                     enemyHealth.TakeDamage (damagePerShot, shootHit.point);
                 }*/
+                shootHit.collider.GetComponent<healthManager>().disable();
                 gunLine.SetPosition(1, shootHit.point);
+                Debug.Log("if true");
             }
             else
             {
+                Debug.Log("if false");
                 gunLine.SetPosition(1, shootRay.origin + shootRay.direction * range);
             }
         }

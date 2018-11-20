@@ -126,6 +126,8 @@
      <Compile Include="Assets\Pixelplacement\Surge\Utilities\Math.cs" />
      <Compile Include="Assets\Reichsrevolver_M1879\Scripts\RevolverController.cs" />
      <Compile Include="Assets\Scenes\LevelControl.cs" />
+     <Compile Include="Assets\ScoreSystem.cs" />
+     <Compile Include="Assets\Scripts\healthManager.cs" />
      <Compile Include="Assets\Scripts\Hover.cs" />
      <Compile Include="Assets\Scripts\lightToggle.cs" />
      <Compile Include="Assets\Scripts\PlayerShooting.cs" />
