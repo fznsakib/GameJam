@@ -7,6 +7,10 @@ TagManager:
   - projectile
   - FxTemporaire
   - GunTag
+  - Destructible
+  - Enemy
+  - Waypoint
+  - Breadcrumb
   layers:
   - Default
   - TransparentFX
@@ -17,11 +21,11 @@ TagManager:
   - 
   - 
   - Shootable
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Breadcrumb
+  - Waypoint
+  - Obstacle
   - 
   - 
   - 

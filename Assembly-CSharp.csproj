@@ -61,9 +61,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BreadcrumbAi\Ai\Scripts\Ai.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Ai\Scripts\AiManager.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Ai\Scripts\Breadcrumbs.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Ai\Scripts\Extras\BA_BasicFPS.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoCameraControls.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoDestroyExplosion.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoDestroyObject.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoEnemyControls.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoGameOver.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoGrenadeExplode.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoLightingControls.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoPickUpHealth.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoPlayerControls.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoRemovePhysics.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoScore.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoSpawnerControl.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoTidyBullets.cs" />
+    <Compile Include="Assets\BreadcrumbAi\Examples\Demo\Scripts\DemoTidySpit.cs" />
     <Compile Include="Assets\Easycontroller.cs" />
     <Compile Include="Assets\healthManager.cs" />
     <Compile Include="Assets\Prefabs\Reichsrevolver_M1879\Scripts\RevolverController.cs" />
+    <Compile Include="Assets\Scripts\Hover.cs" />
     <Compile Include="Assets\Scripts\lightToggle.cs" />
     <Compile Include="Assets\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Scripts\shootingScript.cs" />
@@ -232,6 +251,7 @@
     <Compile Include="Assets\SteamVR_Input\ActionObjects\SteamVR_Input_ActionSet_platformer_In.cs" />
     <Compile Include="Assets\SteamVR_Input\SteamVR_Input_Actions.cs" />
     <Compile Include="Assets\SteamVR_Input\SteamVR_Input_ActionSets.cs" />
+    <None Include="Assets\BreadcrumbAi\Examples\Demo\Materials\DoubleSided.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
@@ -244,18 +264,13 @@
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_ColorOut.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
+    <None Include="Assets\BreadcrumbAi\Ai\Documentation\ReadMe.txt" />
     <None Include="Assets\SteamVR\InteractionSystem\Readme_InteractionSystem.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Manhattan/Documents/GameJam/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Manhattan/Documents/GameJam/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>C:/Users/Manhattan/Documents/GameJam/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Manhattan/Documents/GameJam/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
