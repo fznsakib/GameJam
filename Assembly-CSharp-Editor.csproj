@@ -54,6 +54,17 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Crystal_Mine\Spline_Tool\Editor\Trail_MeshEditor.cs" />
+     <Compile Include="Assets\Pixelplacement\Surge\Chooser\Editor\ChooserEditor.cs" />
+     <Compile Include="Assets\Pixelplacement\Surge\ColliderButton\Editor\ColliderButtonEditor.cs" />
+     <Compile Include="Assets\Pixelplacement\Surge\Communication\Editor\ClientEditor.cs" />
+     <Compile Include="Assets\Pixelplacement\Surge\Communication\Editor\ServerEditor.cs" />
+     <Compile Include="Assets\Pixelplacement\Surge\DisplayObject\Editor\DisplayObjectEditor.cs" />
+     <Compile Include="Assets\Pixelplacement\Surge\Editor\InitializationRequirements.cs" />
+     <Compile Include="Assets\Pixelplacement\Surge\Spline\Editor\SplineAnchorEditor.cs" />
+     <Compile Include="Assets\Pixelplacement\Surge\Spline\Editor\SplineEditor.cs" />
+     <Compile Include="Assets\Pixelplacement\Surge\Spline\Editor\SplineTangentEditor.cs" />
+     <Compile Include="Assets\Pixelplacement\Surge\StateMachine\Editor\StateEditor.cs" />
+     <Compile Include="Assets\Pixelplacement\Surge\StateMachine\Editor\StateMachineEditor.cs" />
      <Compile Include="Assets\SteamVR\Editor\SteamVR_Editor.cs" />
      <Compile Include="Assets\SteamVR\Editor\SteamVR_Preferences.cs" />
      <Compile Include="Assets\SteamVR\Editor\SteamVR_RenderModelEditor.cs" />
