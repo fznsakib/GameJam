@@ -295,6 +295,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  DeathEffect: {fileID: 198506648015676064, guid: 37d008614afeb2f4fab4e4a5b1aa8add,
+    type: 2}
   healthUI: {fileID: 0}
 --- !u!65 &134948810
 BoxCollider:
@@ -486,6 +488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  DeathEffect: {fileID: 198506648015676064, guid: 37d008614afeb2f4fab4e4a5b1aa8add,
+    type: 2}
   healthUI: {fileID: 0}
 --- !u!65 &368878214
 BoxCollider:
@@ -879,6 +883,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  DeathEffect: {fileID: 198506648015676064, guid: 37d008614afeb2f4fab4e4a5b1aa8add,
+    type: 2}
   healthUI: {fileID: 0}
 --- !u!65 &841511105
 BoxCollider:

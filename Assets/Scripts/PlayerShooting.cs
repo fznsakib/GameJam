@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Threading;
 
 namespace Valve.VR.InteractionSystem.Sample
 {
@@ -83,7 +84,8 @@ namespace Valve.VR.InteractionSystem.Sample
                     enemyHealth.TakeDamage (damagePerShot, shootHit.point);
                 }*/
                 shootHit.collider.GetComponent<healthManager>().disable();
-                Debug.Log("if is true");
+
+                //Debug.Log("if is true");
                 gunLine.SetPosition(1, shootHit.point);
             }
             else
@@ -91,6 +93,7 @@ namespace Valve.VR.InteractionSystem.Sample
                 Debug.Log("if is false");
                 gunLine.SetPosition(1, shootRay.origin + shootRay.direction * range);
             }
+
         }
     }
 }
